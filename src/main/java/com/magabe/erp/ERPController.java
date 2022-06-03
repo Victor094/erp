@@ -6,8 +6,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ERPController {
 
-    @GetMapping("/_layout")
-    public String goHome(){
-        return "/_layout";
+//    @GetMapping("/index")
+//    public String goHome(){
+//        return "register_candidate_form";
+//    }
+
+    @GetMapping("recruitment")
+    public String recruitment(){
+        return "/recruitment/index";
     }
 }
