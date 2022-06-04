@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ERPController {
 
-    @GetMapping("/_layout")
+    @GetMapping("/index")
     public String goHome(){
-        return "/_layout";
+        return "index";
     }
 }
