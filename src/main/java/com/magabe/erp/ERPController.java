@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ERPController {
 
-//    @GetMapping("/index")
-//    public String goHome(){
-//        return "register_candidate_form";
-//    }
+    @GetMapping("/index")
+    public String goHome(){
+        return "index";
+    }
 
     @GetMapping("recruitment")
     public String recruitment(){
