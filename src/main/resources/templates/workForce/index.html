@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="_layout">
+
+<body>
+
+<div layout:fragment="content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"><i class="fa fa fa-bars"></i>Recruitment Home</h3>
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="/index">Home</a></li>
+                    <li><i class="fa fa-bars"></i><a href="/work-force">Recruitment Home</a></li>
+                    <li><i class="fa fa-square-o"></i>Recruitment Home</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <section class="panel">
+                    <div class="panel-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><h3><b>Register</b></h3></h5>
+                                <p class="card-text">Register new employee</p>
+                                <a href="/work-force/register-employee" class="btn btn-primary">Register Employee</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-4">
+                <section class="panel">
+                    <div class="panel-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><h3><b>Leave</b></h3></h5>
+                                <p class="card-text">Apply for various leaves</p>
+                                <a href="work-force/apply-leave" class="btn btn-primary">Apply For Leave</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-4">
+                <section class="panel">
+                    <div class="panel-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><h3><b>Training</b></h3></h5>
+                                <p class="card-text">Assign a training to an employee</p>
+                                <a href="work-force/assign-training" class="btn btn-primary">Assign Trainings</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </section>
+</div>
+
+</body>
+</html>
