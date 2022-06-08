@@ -10,4 +10,13 @@ public class ERPController {
     public String goHome(){
         return "index";
     }
+    @GetMapping("security")
+    public String securiryHome(){
+        return "security/index";
+    }
+    @GetMapping("/work-force")
+    public String WorkForceHome(){
+        return "WorkForce/index";
+    }
+
 }
