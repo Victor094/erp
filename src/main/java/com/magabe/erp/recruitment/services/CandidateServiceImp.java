@@ -51,6 +51,13 @@ public class CandidateServiceImp implements CandidateService {
         return  candidateList;
     }
 
+    @Override
+    public void deleteCandidateByid(long id) {
+
+        candidateRepository.deleteById(((int) id));
+
+    }
+
     public void sendEmail(Candidate candidate) {
         SimpleMailMessage message = new SimpleMailMessage();
 

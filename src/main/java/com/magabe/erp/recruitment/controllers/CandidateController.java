@@ -56,6 +56,16 @@ public class CandidateController {
         model.addAttribute("candidate", candidate);
         return "recruitment/EditRateCandidates";
     }
+    @GetMapping("recruitment/candidates/delete/{id}")
+    public String showFormForDeleteCandidate(@PathVariable( value = "id") long id, Model model) {
+
+        // get employee from the service
+        employeeService.deleteCandidateByid(id);
+
+        // set employee as a model attribute to pre-populate the form
+//        model.addAttribute("candidate", candidate);
+        return "redirect:/recruitment/candidates";
+    }
 
     @GetMapping("recruitment/send-email-shortlisted")
     public String ShortListedCandidates(Model model) {

@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface CandidateRepository extends CrudRepository<Candidate, Integer> {
     Candidate findByEmail(String email);
-    @Query("SELECT u FROM Candidate u WHERE u.rate = 1")
+    @Query("SELECT u FROM Candidate u WHERE u.rate >= 3")
     List<Candidate> findAllHighRatings(int rate);
 }

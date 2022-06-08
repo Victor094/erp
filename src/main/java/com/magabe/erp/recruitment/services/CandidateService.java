@@ -13,4 +13,6 @@ public interface CandidateService {
     List<Candidate> getAllCandidates();
 
     List<Candidate> getHighlyRatedCandidates();
+
+    void deleteCandidateByid(long id);
 }
