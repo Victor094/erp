@@ -10,4 +10,7 @@ public interface PayrollService {
 
    void  SavePayroll(Payroll payroll);
    List<Payroll> findAllPayroll();
+   void deleteCandidateByid(long id);
+   Payroll getCandidateById(long id);
+
 }

@@ -10,7 +10,7 @@ public class ERPController {
     public String goHome(){
         return "index";
     }
-    @GetMapping("payroll")
+    @GetMapping("/payroll")
     public String payroll(){
         return "/payroll/index";
     }

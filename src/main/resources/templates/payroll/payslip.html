@@ -1,4 +1,4 @@
-<html>
+<html xmlns:th="" xmlns:layout="">
 <head>
     <style>
 table{
@@ -63,7 +63,7 @@ table th{background-color:#fbc403; color:#363636;}
 <table border="1">
     <tr>
         <th >Earnings</th>
-        <th>Amount</th>
+        <td th:text="${payroll.salary}" </td>
         <th >Deductions</th>
         <th>Amount</th>
     </tr>
