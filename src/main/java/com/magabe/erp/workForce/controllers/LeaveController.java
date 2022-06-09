@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Optional;
 
 @Controller
 public class LeaveController {
@@ -43,10 +44,9 @@ public class LeaveController {
     //Edit Leave
     @GetMapping("/work-force/apply-leave/{op}/{id}")
     public String editLeave(@PathVariable Integer id, @PathVariable String op, Model model){
-        Leave leave = leaveService.findLeaveByID(id).get();
-        System.out.print(leave.getAppliedDate());
+        Leave leave = leaveService.findLeaveByID(id);
         model.addAttribute("leave", leave);
-        return "/workForce/leave"+ op;
+        return "/workForce/leaveEdit1";
     }
 
 

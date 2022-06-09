@@ -1,6 +1,9 @@
 package com.magabe.erp.workForce.entities;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name="leave")
@@ -13,16 +16,17 @@ public class Leave {
     private String lastName;
     private String birthdayDate;
     private String gender;
-    private String emailAddress;
+    private  String emailAddress;
+
     private String startDate ;
     private String endDate ;
     private String leaveType;
-    private String status;
+    private String status="pending";
     private String appliedDate;
     private String uniqueLeaveNo;
-    private int sickLeaveBalance;
-    private int annualLeaveBalance;
-    private int familyResponsibilityLeaveBalance;
+    private int sickLeaveBalance=20;
+    private int annualLeaveBalance=7;
+    private int familyResponsibilityLeaveBalance=10;
 
     public int getId() {
         return id;

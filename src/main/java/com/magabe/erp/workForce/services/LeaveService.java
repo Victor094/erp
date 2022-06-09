@@ -10,7 +10,7 @@ import java.util.Optional;
 public interface LeaveService {
     List<Leave> findAllEmployeeLeaves();
     void saveLeave(Leave leave);
-    Optional<Leave> findLeaveByID(int id);
+    Leave findLeaveByID(int id);
 
 
 }
