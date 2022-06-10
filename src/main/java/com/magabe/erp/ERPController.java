@@ -18,4 +18,10 @@ public class ERPController {
     public String payroll(){
         return "/payroll/index";
     }
+    @GetMapping("security")
+    public String securiryHome(){
+        return "security/index";
+    }
+
+
 }
