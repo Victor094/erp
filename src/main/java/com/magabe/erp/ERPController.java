@@ -23,5 +23,9 @@ public class ERPController {
         return "security/index";
     }
 
+    @GetMapping("recruitment")
+    public String recruitment(){
+        return "/recruitment/index";
+    }
 
 }
