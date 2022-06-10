@@ -32,7 +32,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
 //                .antMatchers("/users/addNew").permitAll()
 //                .antMatchers("/recruitment/").hasAuthority("ADMIN,HR")
 //                .antMatchers("/payroll/**").hasAuthority("ADMIN,HR")
-                .antMatchers("/payroll/register_payroll/remuneration/*").hasAuthority("HR,USER")
+//                .antMatchers("/payroll/register_payroll/remuneration/*").hasAuthority("HR,USER")
 //                .antMatchers("/work-force/**").hasAuthority("HR,ADMIN")
 //                .antMatchers("/work-force/leave-add").hasAuthority("USER")
 //                .antMatchers("/work-force/apply-leave").hasAuthority("USER")
