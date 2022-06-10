@@ -25,7 +25,7 @@ public class ERPController {
 
     @GetMapping("recruitment")
     public String recruitment(){
-        return "/recruitment/index";
+        return "recruitment/index";
     }
 
 }
