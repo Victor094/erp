@@ -10,20 +10,20 @@ public class ERPController {
     public String goHome(){
         return "index";
     }
-    @GetMapping("work-force")
+    @GetMapping("/work-force")
     public String goWorkForce(){
         return "workForce/index";
     }
-    @GetMapping("payroll")
+    @GetMapping("/payroll")
     public String payroll(){
         return "/payroll/index";
     }
-    @GetMapping("security")
+    @GetMapping("/security")
     public String securiryHome(){
         return "security/index";
     }
 
-    @GetMapping("recruitment")
+    @GetMapping("/recruitment")
     public String recruitment(){
         return "recruitment/index";
     }

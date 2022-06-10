@@ -23,7 +23,7 @@ public class CandidateController {
 //    public  String viewHomepage(){
 //        return  "index";
 //    }
-    @GetMapping("recruitment/register-candidate")
+    @GetMapping("/recruitment/register-candidate")
     public String showLeaveForm(Model model){
         model.addAttribute("candidate", new Candidate());
         return "recruitment/register_candidate_form";
@@ -39,14 +39,14 @@ public class CandidateController {
         return  "redirect:/recruitment";
     }
 
-    @GetMapping("recruitment/candidates")
+    @GetMapping("/recruitment/candidates")
     public String listCandidates(Model model) {
         List<Candidate> candidateList = employeeService.getAllCandidates();
         model.addAttribute("candidateList", candidateList);
         return "recruitment/list_of_candidates";
     }
 
-    @GetMapping("recruitment/candidates/edit/{id}")
+    @GetMapping("/recruitment/candidates/edit/{id}")
     public String showFormForUpdate(@PathVariable( value = "id") long id, Model model) {
 
         // get employee from the service
@@ -54,9 +54,9 @@ public class CandidateController {
 
         // set employee as a model attribute to pre-populate the form
         model.addAttribute("candidate", candidate);
-        return "recruitment/EditRateCandidates";
+        return "/recruitment/EditRateCandidates";
     }
-    @GetMapping("recruitment/candidates/delete/{id}")
+    @GetMapping("/recruitment/candidates/delete/{id}")
     public String showFormForDeleteCandidate(@PathVariable( value = "id") long id, Model model) {
 
         // get employee from the service
@@ -67,7 +67,7 @@ public class CandidateController {
         return "redirect:/recruitment/candidates";
     }
 
-    @GetMapping("recruitment/send-email-shortlisted")
+    @GetMapping("/recruitment/send-email-shortlisted")
     public String ShortListedCandidates(Model model) {
         List<Candidate> candidateList = employeeService.getHighlyRatedCandidates();
         model.addAttribute("candidateList", candidateList);

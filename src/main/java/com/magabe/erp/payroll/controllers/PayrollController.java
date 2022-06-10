@@ -16,7 +16,7 @@ public class PayrollController {
     @Autowired
     PayrollService payrollService;
 
-    @GetMapping("payroll/register_payroll")
+    @GetMapping("/payroll/register_payroll")
     public String PayrollRegisterForm(Model model){
         model.addAttribute("payroll", payrollService.findAllPayroll());
 //        model.addAttribute("payroll", new Payroll());
