@@ -10,4 +10,9 @@ public class ERPController {
     public String goHome(){
         return "index";
     }
+
+    @GetMapping("recruitment")
+    public String recruitment(){
+        return "/recruitment/index";
+    }
 }
