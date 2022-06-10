@@ -30,6 +30,8 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/login", "/resources/**", "/css/**", "/fonts/**", "/img/**").permitAll()
                 .antMatchers("/register", "/resources/**", "/css/**", "/fonts/**", "/img/**", "/js/**").permitAll()
                 .antMatchers("/users/addNew").permitAll()
+                .antMatchers("/security/user/Edit/**").hasAuthority("ADMIN")
+
 //                .antMatchers("/recruitment/").hasAuthority("ADMIN,HR")
 //                .antMatchers("/payroll/**").hasAuthority("ADMIN,HR")
 //                .antMatchers("/payroll/register_payroll/remuneration/*").hasAuthority("HR,USER")
