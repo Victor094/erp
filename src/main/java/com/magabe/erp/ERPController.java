@@ -14,4 +14,8 @@ public class ERPController {
     public String goWorkForce(){
         return "workForce/index";
     }
+    @GetMapping("/payroll")
+    public String payroll(){
+        return "/payroll/index";
+    }
 }
