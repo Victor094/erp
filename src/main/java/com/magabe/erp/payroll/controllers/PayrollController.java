@@ -16,21 +16,21 @@ public class PayrollController {
     @Autowired
     PayrollService payrollService;
 
-    @GetMapping("/payroll/register_payroll")
+    @GetMapping("payroll/register_payroll")
     public String PayrollRegisterForm(Model model){
         model.addAttribute("payroll", payrollService.findAllPayroll());
 //        model.addAttribute("payroll", new Payroll());
 
         return "payroll/payrollE";
     }
-    @GetMapping("/payroll/payroll_add")
+    @GetMapping("payroll/payroll_add")
     public String addEmployeeToPayroll(Model model){
         model.addAttribute("payroll", new Payroll());
         return "/payroll/payrollAdd";
     }
 
     //Add/save Employee
-    @PostMapping("/payroll/register_payroll")
+    @PostMapping("payroll/register_payroll")
     public String addNew(Payroll payroll) {
         payrollService.SavePayroll(payroll);
         return "redirect:/payroll/register_payroll";
@@ -42,7 +42,7 @@ public class PayrollController {
 //        return "payroll/payslip";
 //    }
 
-    @GetMapping("/payroll/register_payroll/remuneration/{id}")
+    @GetMapping("payroll/register_payroll/remuneration/{id}")
     public String showRemuneration(@PathVariable( value = "id") long id, Model model) {
 
         // get employee from the service
