@@ -16,7 +16,7 @@ public class ERPController {
     }
     @GetMapping("/payroll")
     public String payroll(){
-        return "/payroll/index";
+        return "payroll/index";
     }
     @GetMapping("/security")
     public String securiryHome(){
